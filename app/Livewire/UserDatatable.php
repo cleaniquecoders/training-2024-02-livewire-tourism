@@ -17,6 +17,9 @@ class UserDatatable extends Component
     #[Url(as: 'q')]
     public string $search = '';
 
+    #[Url(as: 'v')]
+    public int $verify = 0;
+
     public function render()
     {
         return view('livewire.user-datatable', [
@@ -24,6 +27,14 @@ class UserDatatable extends Component
                 ->when(
                     strlen($this->search) > 3,
                     fn($query) => $query->search($this->search)
+                )
+                ->when(
+                    $this->verify == 1,
+                    fn($query) => $query->whereNotNull('email_verified_at')
+                )
+                ->when(
+                    $this->verify == 2,
+                    fn($query) => $query->whereNull('email_verified_at')
                 )
                 ->paginate($this->perPage),
         ]);

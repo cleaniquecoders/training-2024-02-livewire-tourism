@@ -14,6 +14,14 @@
                     <option value="50">50</option>
                     <option value="100">100</option>
                 </select>
+
+                <select wire:model.live.debounce.500ms="verify"
+                    class=" border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-gray-500 dark:focus:border-gray-600 focus:ring-gray-500 dark:focus:ring-gray-600 rounded-md shadow-sm">
+                    <option value="0">All</option>
+                    <option value="1">Verified Account</option>
+                    <option value="2">Unverified Account</option>
+                </select>
+
                 {{ $users->links() }}
             </div>
             <div class="bg-white border border-slate-300 rounded-md shadow-md">
