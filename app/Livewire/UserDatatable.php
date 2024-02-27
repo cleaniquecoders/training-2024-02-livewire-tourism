@@ -20,7 +20,7 @@ class UserDatatable extends Component
             'users' => User::query()
                 ->when(
                     strlen($this->search) > 3,
-                    fn($query) => $query->where('name', 'like', '%'.$this->search.'%')
+                    fn($query) => $query->search($this->search)
                 )
                 ->paginate($this->perPage),
         ]);
