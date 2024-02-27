@@ -11,10 +11,10 @@ class UserDatatable extends Component
 {
     use WithPagination;
 
-    #[Url(as: 'q')]
+    #[Url]
     public int $perPage = 25;
 
-    #[Url]
+    #[Url(as: 'q')]
     public string $search = '';
 
     public function render()
