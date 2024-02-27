@@ -38,8 +38,40 @@ Update the `resources/views/livewire/counter.blade.php`:
 
 ```php
 <div>
-    <h1>Counter</h1>
+    <h1>Counter: {{ $count }}</h1>
+
+    <button wire:click="increment">+</button>
+
+    <button wire:click="decrement">-</button>
 </div>
 ```
 
+Update `app/Livewire/Counter.php`:
 
+```php
+<?php
+
+namespace App\Livewire;
+
+use Livewire\Component;
+
+class Counter extends Component
+{
+    public int $count = 0;
+
+    public function increment()
+    {
+        $this->count++;
+    }
+
+    public function decrement()
+    {
+        $this->count--;
+    }
+
+    public function render()
+    {
+        return view('livewire.counter');
+    }
+}
+```
