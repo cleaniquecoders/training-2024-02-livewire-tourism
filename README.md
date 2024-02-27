@@ -197,3 +197,9 @@ Update `config/livewire.php` layout to:
 ```bash
 php artisan livewire:make Forms/User
 ```
+
+### Creating User Datatable
+
+```bash
+php artisan livewire:make UserDatatable
+```
