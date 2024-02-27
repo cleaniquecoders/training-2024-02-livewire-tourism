@@ -167,3 +167,11 @@ Update the `resources/views/livewire/search-user.blade.php`, to allow search by 
     </div>
 </div>
 ```
+
+Update `routes/web.php` to set URL for search user:
+
+```php
+use App\Livewire\SearchUser;
+
+Route::get('search-user', SearchUser::class);
+```
