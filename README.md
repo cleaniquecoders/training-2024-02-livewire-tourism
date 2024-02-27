@@ -175,3 +175,12 @@ use App\Livewire\SearchUser;
 
 Route::get('search-user', SearchUser::class);
 ```
+
+### Installing Jetstrem
+
+```bash
+composer require laravel/jetstream
+php artisan jetstream:install livewire
+npm install
+npm run build
+```
