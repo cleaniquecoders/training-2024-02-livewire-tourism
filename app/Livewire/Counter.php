@@ -8,12 +8,12 @@ class Counter extends Component
 {
     public int $count = 0;
 
-    public function increment()
+    public function tambah()
     {
         $this->count++;
     }
 
-    public function decrement()
+    public function tolak()
     {
         $this->count--;
     }
