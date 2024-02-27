@@ -67,4 +67,17 @@ class User extends Authenticatable
                 ->orWhere('email', 'like', '%'.$keyword.'%');
         });
     }
+
+    public function scopeAccount($query, $value = null)
+    {
+        return $query
+        ->when(
+            $value == 1,
+            fn($query) => $query->whereNotNull('email_verified_at')
+        )
+        ->when(
+            $value == 2,
+            fn($query) => $query->whereNull('email_verified_at')
+        );
+    }
 }

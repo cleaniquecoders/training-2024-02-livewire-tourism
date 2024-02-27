@@ -28,14 +28,7 @@ class UserDatatable extends Component
                     strlen($this->search) > 3,
                     fn($query) => $query->search($this->search)
                 )
-                ->when(
-                    $this->verify == 1,
-                    fn($query) => $query->whereNotNull('email_verified_at')
-                )
-                ->when(
-                    $this->verify == 2,
-                    fn($query) => $query->whereNull('email_verified_at')
-                )
+                ->account($this->verify)
                 ->paginate($this->perPage),
         ]);
     }
