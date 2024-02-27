@@ -25,4 +25,13 @@ class UserDatatable extends Component
                 ->paginate($this->perPage),
         ]);
     }
+
+    public function removeUser($id)
+    {
+        if(auth()->user()->id == $id) {
+            return;
+        }
+
+        User::where('id', $id)->delete();
+    }
 }
