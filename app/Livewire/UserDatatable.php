@@ -9,11 +9,13 @@ use Livewire\WithPagination;
 class UserDatatable extends Component
 {
     use WithPagination;
-    
+
+    public int $perPage = 25;
+
     public function render()
     {
         return view('livewire.user-datatable', [
-            'users' => User::paginate(),
+            'users' => User::paginate($this->perPage),
         ]);
     }
 }
