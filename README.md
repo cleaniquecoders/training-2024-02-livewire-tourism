@@ -191,3 +191,9 @@ Update `config/livewire.php` layout to:
 ```php
 'layout' => 'layouts.app',
 ```
+
+### Creating User Form
+
+```bash
+php artisan livewire:make Forms/User
+```
