@@ -1,5 +1,5 @@
 <div>
-    <div class="max-w-7xl py-10 sm:px-6 lg:px-8 bg-white mt-8 mx-8">
+    <div class="max-w-7xl py-10 sm:px-6 lg:px-8 bg-white mt-8 mx-auto">
 
         <div class="py-4 flex justify-between ">
             <select wire:model.live.debounce.500ms="perPage"
