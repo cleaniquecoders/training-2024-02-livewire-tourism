@@ -2,9 +2,16 @@
     <div class="max-w-7xl mt-8 mx-auto">
 
         <div>
-            <div class="py-4">
+            <div class="py-4 flex space-x-2">
                 <x-input wire:model.live.debounce.500ms="search" class="w-1/2"
                     placeholder="Search user by name or email..." />
+
+                <select wire:model.live.debounce.500ms="verify"
+                    class=" border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-gray-500 dark:focus:border-gray-600 focus:ring-gray-500 dark:focus:ring-gray-600 rounded-md shadow-sm">
+                    <option value="0">All</option>
+                    <option value="1">Verified Account</option>
+                    <option value="2">Unverified Account</option>
+                </select>
             </div>
             <div class="flex justify-between py-4">
                 <select wire:model.live.debounce.500ms="perPage"
@@ -15,12 +22,7 @@
                     <option value="100">100</option>
                 </select>
 
-                <select wire:model.live.debounce.500ms="verify"
-                    class=" border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-gray-500 dark:focus:border-gray-600 focus:ring-gray-500 dark:focus:ring-gray-600 rounded-md shadow-sm">
-                    <option value="0">All</option>
-                    <option value="1">Verified Account</option>
-                    <option value="2">Unverified Account</option>
-                </select>
+
 
                 {{ $users->links() }}
             </div>
