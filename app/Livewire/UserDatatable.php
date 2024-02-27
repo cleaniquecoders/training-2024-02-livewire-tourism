@@ -12,10 +12,17 @@ class UserDatatable extends Component
 
     public int $perPage = 25;
 
+    public string $search = '';
+
     public function render()
     {
         return view('livewire.user-datatable', [
-            'users' => User::paginate($this->perPage),
+            'users' => User::query()
+                ->when(
+                    strlen($this->search) > 3,
+                    fn($query) => $query->where('name', 'like', '%'.$this->search.'%')
+                )
+                ->paginate($this->perPage),
         ]);
     }
 }
