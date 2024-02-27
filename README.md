@@ -183,4 +183,11 @@ composer require laravel/jetstream
 php artisan jetstream:install livewire
 npm install
 npm run build
+php artisan livewire:publish
+```
+
+Update `config/livewire.php` layout to:
+
+```php
+'layout' => 'layouts.app',
 ```
