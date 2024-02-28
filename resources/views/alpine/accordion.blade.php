@@ -11,7 +11,7 @@
                     class="ml-4 text-2xl cursor-pointer hover:bg-slate-300 hover:rounded-full hover:shadow-sm px-4">&plus;</span>
             </div>
 
-            <div x-show="open" x-transition>
+            <div x-show="open" x-transition:enter.duration.500ms x-transition:leave.duration.250ms >
                 <p class="my-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc condimentum tincidunt
                     gravida. Etiam vel consectetur purus. Donec tincidunt id ligula ut accumsan. Sed semper hendrerit
                     justo, at dapibus velit interdum sed. Sed in eros sit amet elit aliquet varius non placerat nisl.
