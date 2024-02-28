@@ -22,9 +22,18 @@ class UserDatatable extends Component
 
     public bool $displayAddNewUserForm = false;
 
+    public bool $displayUserDetails = false;
+
     public function showNewUserForm()
     {
         $this->displayAddNewUserForm = true;
+    }
+
+    public function showUserDetails($id)
+    {
+        $this->dispatch('fetch-user-details', id: $id);
+
+        $this->displayUserDetails = true;
     }
 
     public function render()

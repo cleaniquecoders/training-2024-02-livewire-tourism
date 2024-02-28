@@ -7,6 +7,10 @@
                 <x-modal wire:model="displayAddNewUserForm">
                     @livewire('forms.user')
                 </x-modal>
+
+                <x-modal wire:model="displayUserDetails">
+                    @livewire('show-user-details')
+                </x-modal>
             </div>
 
             <div class="py-4 flex space-x-2">
@@ -75,8 +79,8 @@
                                     </td>
                                     <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
                                         {{ $user->created_at }}</td>
-                                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500 justify-center gap-4">
-                                        <x-secondary-button>
+                                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500 justify-center gap-4 space-x-2">
+                                        <x-secondary-button wire:click="showUserDetails('{{ $user->id }}')">
                                             View
                                         </x-secondary-button>
                                         <x-button>
