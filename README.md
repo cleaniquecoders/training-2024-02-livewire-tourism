@@ -203,3 +203,17 @@ php artisan livewire:make Forms/User
 ```bash
 php artisan livewire:make UserDatatable
 ```
+
+## Day 2
+
+Install Rappasoft Datatable
+
+```bash
+composer require rappasoft/laravel-livewire-tables
+```
+
+Create the datatable:
+
+```bash
+php artisan make:datatable Datatable/UserTable User
+```

@@ -33,5 +33,6 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 
-    Route::get('users', UserDatatable::class);
+    // Route::get('users', UserDatatable::class);
+    Route::view('users', 'user');
 });
