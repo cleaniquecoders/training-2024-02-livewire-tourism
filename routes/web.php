@@ -40,4 +40,5 @@ Route::middleware([
 Route::prefix('alpine')->group(function() {
     Route::view('counter', 'alpine.counter');
     Route::view('toggle', 'alpine.toggle');
+    Route::view('search', 'alpine.search');
 });
