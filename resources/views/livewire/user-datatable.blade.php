@@ -11,6 +11,8 @@
                 <x-modal wire:model="displayUserDetails">
                     @livewire('show-user-details')
                 </x-modal>
+
+                @livewire('forms.update-user-details')
             </div>
 
             <div class="py-4 flex space-x-2">
@@ -32,9 +34,6 @@
                     <option value="50">50</option>
                     <option value="100">100</option>
                 </select>
-
-
-
                 {{ $users->links() }}
             </div>
             <div class="bg-white border border-slate-300 rounded-md shadow-md">
@@ -83,7 +82,7 @@
                                         <x-secondary-button wire:click="showUserDetails('{{ $user->id }}')">
                                             View
                                         </x-secondary-button>
-                                        <x-button>
+                                        <x-button wire:click="showUpdateUserDetails('{{ $user->id }}')">
                                             Update
                                         </x-button>
                                         @if (auth()->user()->id != $user->id)

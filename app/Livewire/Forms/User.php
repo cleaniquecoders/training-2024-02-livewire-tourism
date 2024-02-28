@@ -32,6 +32,8 @@ class User extends Component
 
         $this->dispatch('saved');
 
+        $this->dispatch('refresh-datatable');
+
         $this->reset();
     }
 

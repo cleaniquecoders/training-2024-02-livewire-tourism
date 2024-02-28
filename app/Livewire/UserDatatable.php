@@ -3,6 +3,7 @@
 namespace App\Livewire;
 
 use App\Models\User;
+use Livewire\Attributes\On;
 use Livewire\Component;
 use Livewire\WithPagination;
 use Livewire\Attributes\Url;
@@ -36,6 +37,12 @@ class UserDatatable extends Component
         $this->displayUserDetails = true;
     }
 
+    public function showUpdateUserDetails($id)
+    {
+        $this->dispatch('update-user-details', id: $id);
+    }
+
+    #[On('refresh-datatable')]
     public function render()
     {
         return view('livewire.user-datatable', [
