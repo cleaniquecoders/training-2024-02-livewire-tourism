@@ -29,6 +29,11 @@
             </div>
 
             <div class="flex items-center justify-end mt-4">
+
+                <div wire:loading>
+                    Saving...
+                </div>
+
                 <x-action-message class="me-3" on="saved">
                     {{ __('User Added.') }}
                 </x-action-message>
