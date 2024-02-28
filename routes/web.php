@@ -43,4 +43,5 @@ Route::prefix('alpine')->group(function() {
     Route::view('search', 'alpine.search');
     Route::view('dropdown', 'alpine.dropdown');
     Route::view('accordion', 'alpine.accordion');
+    Route::view('tab', 'alpine.tab');
 });
