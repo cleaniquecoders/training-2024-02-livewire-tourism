@@ -36,3 +36,7 @@ Route::middleware([
     // Route::get('users', UserDatatable::class);
     Route::view('users', 'user');
 });
+
+Route::prefix('alpine')->group(function() {
+    Route::view('counter', 'alpine.counter');
+});
