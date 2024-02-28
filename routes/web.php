@@ -1,7 +1,6 @@
 <?php
 
 use App\Livewire\Counter;
-use App\Livewire\Forms\User;
 use App\Livewire\SearchUser;
 use App\Livewire\UserDatatable;
 use Illuminate\Support\Facades\Route;
@@ -34,6 +33,5 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 
-    Route::get('users/new', User::class);
     Route::get('users', UserDatatable::class);
 });

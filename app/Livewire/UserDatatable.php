@@ -20,6 +20,13 @@ class UserDatatable extends Component
     #[Url(as: 'v')]
     public int $verify = 0;
 
+    public bool $displayAddNewUserForm = false;
+
+    public function showNewUserForm()
+    {
+        $this->displayAddNewUserForm = true;
+    }
+
     public function render()
     {
         return view('livewire.user-datatable', [

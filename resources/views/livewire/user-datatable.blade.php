@@ -2,6 +2,13 @@
     <div class="max-w-7xl mt-8 mx-auto">
 
         <div>
+            <div class="flex justify-end">
+                <x-button wire:click="showNewUserForm()">New User</x-button>
+                <x-modal wire:model="displayAddNewUserForm">
+                    @livewire('forms.user')
+                </x-modal>
+            </div>
+
             <div class="py-4 flex space-x-2">
                 <x-input wire:model.live.debounce.500ms="search" class="w-1/2"
                     placeholder="Search user by name or email..." />
