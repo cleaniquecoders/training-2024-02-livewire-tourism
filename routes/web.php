@@ -46,4 +46,9 @@ Route::prefix('alpine')->group(function() {
     Route::view('tab', 'alpine.tab');
 });
 
-Route::view('tailwindcss', 'tailwindcss');
+Route::prefix('tailwindcss')->group(function() {
+    Route::view('/', 'tailwindcss');
+    Route::view('flex', 'tailwindcss.flex');
+});
+
+
