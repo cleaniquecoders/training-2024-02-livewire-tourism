@@ -45,3 +45,5 @@ Route::prefix('alpine')->group(function() {
     Route::view('accordion', 'alpine.accordion');
     Route::view('tab', 'alpine.tab');
 });
+
+Route::view('tailwindcss', 'tailwindcss');
