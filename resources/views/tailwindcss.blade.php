@@ -1,34 +1,46 @@
 <x-guest-layout>
-    <div class=" bg-slate-700 w-screen h-screen sm:py-12 lg:py-4">
-        <p class="text-7xl text-center cursor-pointer text-slate-100 hover:text-pink-700">Hello World</p>
-    </div>
 
-    <div class="w-full py-4">
-        <p class="text-4xl text-black text-center py-4">Object, Grid</p>
-        <div class="grid grid-flow-row grid-rows-12 space-y-4 justify-center my-2 bg-slate-300">
-            <div class=" border border-slate-300  p-4">
-                <img src="{{ url('images/manja-vitolic-gKXKBY-C-Dk-unsplash.jpg') }}" class="object-cover  h-96 w-96">
-                <p class="text-slate-700 text-center text-2xl pt-4">Object Cover</p>
+    <div class="w-full my-12">
+        <div class="flex justify-around">
+            <div>
+
+                <img src="https://www.malaysia.travel/storage/6734/conversions/7fb9a1e7d47bff19e269fce1dd06ecb3-thumb.jpg"
+                    class="w-96 h-96 object-cover">
+
+                <div class="flex justify-center">
+                    <div class="-mt-8 border rounded border-slate-300 p-4 bg-white w-80">
+                        <p class="text-md text-slate-700">WP Putrajaya</p>
+                        <p class="text-xl text-slate-900 font-extrabold">Guide to the Must-Visit Public Parks in
+                            Putrajaya
+                        </p>
+                    </div>
+                </div>
+
             </div>
-
-            <div class=" border border-slate-300  p-4">
-                <img src="{{ url('images/manja-vitolic-gKXKBY-C-Dk-unsplash.jpg') }}" class="object-contain  h-96 w-96">
-                <p class="text-slate-700 text-center text-2xl pt-4">Object Contain</p>
+            <div>
+                <img src="https://www.malaysia.travel/storage/6735/conversions/acb4204a7eb20bc84729945bef565432-thumb.jpg"
+                    alt="" class="w-96 h-96 object-cover">
+                <div class="flex justify-center">
+                    <div class="-mt-8 border rounded border-slate-300 p-4 bg-white w-80">
+                        <p class="text-md text-slate-700">
+                            WP Kuala Lumpur</p>
+                        <p class="text-xl text-slate-900 font-extrabold">5 Best Hotspots in Petaling Street You
+                            Don’t...
+                        </p>
+                    </div>
+                </div>
             </div>
-
-            <div class=" border border-slate-300  p-4">
-                <img src="{{ url('images/manja-vitolic-gKXKBY-C-Dk-unsplash.jpg') }}" class="object-fill  h-96 w-96">
-                <p class="text-slate-700 text-center text-2xl pt-4">Object Fill</p>
-            </div>
-
-            <div class=" border border-slate-300  p-4">
-                <img src="{{ url('images/manja-vitolic-gKXKBY-C-Dk-unsplash.jpg') }}" class="object-scale-down  h-96 w-96">
-                <p class="text-slate-700 text-center text-2xl pt-4">Object Scale Down</p>
-            </div>
-
-            <div class=" border border-slate-300  p-4">
-                <img src="{{ url('images/manja-vitolic-gKXKBY-C-Dk-unsplash.jpg') }}" class="object-none  h-96 w-96">
-                <p class="text-slate-700 text-center text-2xl pt-4">Object None</p>
+            <div>
+                <img src="https://www.malaysia.travel/storage/7607/conversions/70ea64636cdfb7337453382feec48653-thumb.jpg"
+                    alt="" class="w-96 h-96 object-cover">
+                <div class="flex justify-center">
+                    <div class="-mt-8 border rounded border-slate-300 p-4 bg-white w-80">
+                        <p class="text-md text-slate-700">
+                            Melaka</p>
+                        <p class="text-xl text-slate-900 font-extrabold">Melaka River Cruise
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
